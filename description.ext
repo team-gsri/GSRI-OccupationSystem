@@ -8,6 +8,9 @@ class CfgFunctions {
 			class populateSheds {};
 			class search {};
 			class clear {};
+			class popHalfShed {};
+			class popFullShed {};
+			class popMetalShed {};
 		};
 	};
 };

@@ -1,8 +1,6 @@
 params["_pos"];
-systemChat str _pos;
 
 _distance = 100*round(GOS_renderDistance * 10);
-systemChat str _distance;
 
 // Retrait des trucs trop loin
 _tmp = [];
