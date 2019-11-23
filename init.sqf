@@ -10,6 +10,8 @@
 prev = [0,0,0];
 actives = [];
 
+LISTE_EXCLUSION = [];
+
 while{true} do {
 	_coord = getPos player;
 	{ _coord set [_forEachIndex, 1000 * floor (_x / 1000)] } forEach _coord;
