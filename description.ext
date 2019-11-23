@@ -1,0 +1,13 @@
+class CfgFunctions {
+	class GOS {
+		class GOS {
+			class populate {};
+			class populatePatrols {};
+			class populateMilitaryHQ {};
+			class populateSolarTowers {};
+			class populateSheds {};
+			class search {};
+			class clear {};
+		};
+	};
+};

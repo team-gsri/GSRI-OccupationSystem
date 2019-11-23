@@ -1,0 +1,261 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=16;
+	};
+	class Camera
+	{
+		pos[]={4148.7041,110.58954,11804.024};
+		dir[]={-0.39055482,-0.83253324,-0.39312685};
+		up[]={-0.58675009,0.55398524,-0.5906117};
+		aside[]={-0.70948851,-3.0954834e-007,0.7048465};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Characters_F_Exp_Civil",
+	"A3_Soft_F_Enoch_Offroad_01",
+	"A3_Structures_F_Ind_Shed"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Soft_F_Enoch";
+			name="Arma 3 Enoch - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Structures_F_Ind";
+			name="Arma 3 - Industrial Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=15172385;
+class ScenarioData
+{
+	author="[-GSRI-] Cheitan";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=8;
+		class Item0
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3970.7461,23.658308,12597.091};
+						angles[]={0.027993103,2.125484,0.08115413};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=2;
+					type="C_man_1";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2;
+						item1=1;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3970.6069,25.366751,12597.122};
+				angles[]={0.027993103,2.125484,0.08115413};
+			};
+			side="Civilian";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=1;
+			type="C_Offroad_01_comms_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4334.1216,54.487549,11852.486};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=10;
+			type="Land_i_Shed_Ind_F";
+			atlOffset=0.85420227;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4303.7202,55.376488,11837.275};
+				angles[]={0,5.741673,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=11;
+			type="Land_i_Shed_Ind_F";
+			atlOffset=0.36619949;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4261.561,53.704525,11876.875};
+				angles[]={0,5.8826056,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=12;
+			type="Land_Shed_Big_F";
+			atlOffset=0.50920486;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4161.3066,55.701199,11800.186};
+				angles[]={0,5.0655956,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=13;
+			type="Land_Shed_Big_F";
+			atlOffset=0.60237503;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4154.8823,54.887474,11757.37};
+				angles[]={0,3.3296032,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=14;
+			type="Land_Shed_Small_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4109.5122,52.645885,11783.899};
+				angles[]={0,3.9385672,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15;
+			type="Land_Shed_Small_F";
+		};
+	};
+};
