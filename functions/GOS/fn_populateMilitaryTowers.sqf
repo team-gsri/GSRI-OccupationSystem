@@ -1,6 +1,7 @@
 ﻿params["_loc"];
 _center = locationPosition _loc;
 _list = [];
+_building_list = _loc getVariable ["GOS_marked", []];
 
 {
 	if!(_x getVariable ["marked", false]) then {
@@ -17,7 +18,9 @@ _list = [];
 		};
 		{ doStop _x } forEach units _group;
 		//[_group] call DW_fnc_addInjurableGroup;
+		_building_list pushBack _x;
 	};
 } forEach (_center nearObjects ["Cargo_Tower_base_F", 1000]);
 
+_loc setVariable ["GOS_marked", _building_list];
 _loc setVariable ["GOS_towers", _list];

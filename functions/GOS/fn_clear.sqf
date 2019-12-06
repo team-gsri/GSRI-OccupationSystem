@@ -22,4 +22,5 @@ _clear_list = {
 	_loc getVariable ["GOS_watch",[]]
 ];
 
+{ _x setVariable ["marked", nil] } forEach (_loc getVariable ["GOS_marked",[]]);
 deleteLocation _loc;
