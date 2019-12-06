@@ -17,5 +17,9 @@ _clear_list = {
 	_loc getVariable ["GOS_patrols",[]],
 	_loc getVariable ["GOS_hq",[]],
 	_loc getVariable ["GOS_solar",[]],
-	_loc getVariable ["GOS_sheds",[]]
+	_loc getVariable ["GOS_sheds",[]],
+	_loc getVariable ["GOS_towers",[]],
+	_loc getVariable ["GOS_watch",[]]
 ];
+
+deleteLocation _loc;

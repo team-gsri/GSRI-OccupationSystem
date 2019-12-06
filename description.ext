@@ -4,6 +4,8 @@ class CfgFunctions {
 			class populate {};
 			class populatePatrols {};
 			class populateMilitaryHQ {};
+			class populateMilitaryTowers {};
+			class populateMilitaryWatchTowers {};
 			class populateSolarTowers {};
 			class populateSheds {};
 			class search {};
