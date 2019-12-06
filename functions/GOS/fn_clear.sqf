@@ -12,7 +12,7 @@ _clear_list = {
 };
 
 {
-	[_x] spawn _clear_list;
+	[_x] call _clear_list;
 } forEach [
 	_loc getVariable ["GOS_patrols",[]],
 	_loc getVariable ["GOS_hq",[]],
