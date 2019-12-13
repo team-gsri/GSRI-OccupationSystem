@@ -1,26 +1,20 @@
-params["_loc"];
-
-deleteMarker (_loc getVariable "marker");
-
-_clear_list = {
-	params["_list"];
-	{
-		// TODO faudra supprimer les véhicules hors GOS
-		if(vehicle player == _x) then { LISTE_EXCLUSION pushBack _x }
-		else { deleteVehicle _x };
-	 } forEach _list;
-};
+params["_stronghold"];
 
 {
-	[_x] call _clear_list;
+	{
+		// TODO delete unmanaged vehicles
+		if(vehicle player == _x) then { EXCLUSION_LIST pushBack _x }
+		else { deleteVehicle _x };
+	} forEach _x;
 } forEach [
-	_loc getVariable ["GOS_patrols",[]],
-	_loc getVariable ["GOS_hq",[]],
-	_loc getVariable ["GOS_solar",[]],
-	_loc getVariable ["GOS_sheds",[]],
-	_loc getVariable ["GOS_towers",[]],
-	_loc getVariable ["GOS_watch",[]]
+	_stronghold getVariable ["GOS_patrols",[]],
+	_stronghold getVariable ["GOS_hq",[]],
+	_stronghold getVariable ["GOS_solar",[]],
+	_stronghold getVariable ["GOS_sheds",[]],
+	_stronghold getVariable ["GOS_towers",[]],
+	_stronghold getVariable ["GOS_watch",[]]
 ];
 
-{ _x setVariable ["marked", nil] } forEach (_loc getVariable ["GOS_marked",[]]);
-deleteLocation _loc;
+{ _x setVariable ["marked", nil] } forEach (_stronghold getVariable ["GOS_marked",[]]);
+deleteMarker str _stronghold;
+_stronghold setVariable ["GOS_occupied", false];
