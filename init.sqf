@@ -48,7 +48,7 @@ while{true} do {
 		_gridCellPos = [_x] call GOS_fnc_gridToPos;
 		_renderDistance = 100*round(GOS_renderDistance * 10);
 		_candidates = nearestLocations[_gridCellPos, ["Invisible"], _renderDistance] select {!(_x getVariable "GOS_occupied")};
-		{ [_x] call GOS_fnc_search } forEach _candidates; //todo optimize
+		{ [_x] call GOS_fnc_populate } forEach _candidates;
 	} forEach _gridCells;
 
 	sleep 10;

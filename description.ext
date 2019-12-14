@@ -8,7 +8,6 @@ class CfgFunctions {
 			class populateMilitaryWatchTowers {};
 			class populateSolarTowers {};
 			class populateSheds {};
-			class search {};
 			class clear {};
 			class popHalfShed {};
 			class popFullShed {};

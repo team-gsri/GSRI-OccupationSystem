@@ -1,14 +1,17 @@
-params["_loc"];
+params["_stronghold"];
 
-_m = createMarker [str _loc, locationPosition _loc];
+_stronghold setVariable ["GOS_occupied", true];
+_distance = 100*round(GOS_renderDistance * 10);
+
+_m = createMarker [str _stronghold, locationPosition _stronghold];
 _m setMarkerType "hd_dot";
 _m setMarkerColor "ColorRed";
-_loc setVariable ["marker", _m];
+_stronghold setVariable ["marker", _m];
 
 // Patrols
-[_loc] call GOS_fnc_populatePatrols;
-[_loc] call GOS_fnc_populateMilitaryHQ;
-[_loc] call GOS_fnc_populateMilitaryTowers;
-[_loc] call GOS_fnc_populateMilitaryWatchTowers;
-[_loc] call GOS_fnc_populateSolarTowers;
-[_loc] call GOS_fnc_populateSheds;
+[_stronghold] call GOS_fnc_populatePatrols;
+[_stronghold] call GOS_fnc_populateMilitaryHQ;
+[_stronghold] call GOS_fnc_populateMilitaryTowers;
+[_stronghold] call GOS_fnc_populateMilitaryWatchTowers;
+[_stronghold] call GOS_fnc_populateSolarTowers;
+[_stronghold] call GOS_fnc_populateSheds;
