@@ -8,6 +8,6 @@ _gridCells = [];
 {
 	_gridCell = mapGridPosition _x;
 	_gridCells pushBackUnique _gridCell;
-} forEach (allPlayers - entities "HeadlessClient_F");
+} forEach ((allPlayers - entities "HeadlessClient_F") select {alive _x});
 
 _gridCells
