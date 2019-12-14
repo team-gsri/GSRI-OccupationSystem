@@ -18,7 +18,7 @@ _pos = [[1.4,0,0],[1.4,7,0],[1.4,-7,0]];
 } forEach _pos;
 sleep 1;
 createGuardedPoint [east, _shed, -1, objNull];
-_group = [getPos _shed, east, ["O_Soldier_F", "O_Soldier_AR_F", "O_crew_F"]] call BIS_fnc_spawnGroup;
+_group = [getPosATL _shed, east, ["O_Soldier_F", "O_Soldier_AR_F", "O_crew_F"]] call BIS_fnc_spawnGroup;
 _group deleteGroupWhenEmpty true;
 //[_group] call LM_fnc_addInjurableGroup;
 { _list pushback _x } forEach (units _group);
