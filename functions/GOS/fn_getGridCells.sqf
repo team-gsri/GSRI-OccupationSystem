@@ -3,10 +3,10 @@
  * Several players can be on the same gridCell, but it is returned once nonetheless.
  */
 
-_gridCells = [];
+private _gridCells = [];
 
 {
-	_gridCell = mapGridPosition _x;
+	private _gridCell = mapGridPosition _x;
 	_gridCells pushBackUnique _gridCell;
 } forEach ((allPlayers - entities "HeadlessClient_F") select {alive _x});
 

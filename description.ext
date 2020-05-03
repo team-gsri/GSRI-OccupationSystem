@@ -3,9 +3,7 @@ class CfgFunctions {
 		class GOS {
 			class populate {};
 			class populatePatrols {};
-			class populateMilitaryHQ {};
-			class populateMilitaryTowers {};
-			class populateMilitaryWatchTowers {};
+			class populateMilitaryBuildings {};
 			class populateSolarTowers {};
 			class populateSheds {};
 			class clear {};

@@ -17,11 +17,11 @@
 ] call CBA_fnc_addSetting;
 
 // Strongholds prepositionning
-_cities = (configFile >> "CfgWorlds" >> worldName >> "Names");
-_strongholds = [];
+private _cities = (configFile >> "CfgWorlds" >> worldName >> "Names");
+private _strongholds = [];
 {
 	if (getText (_cities >> _x >> "type") in ["NameCity", "NameCityCapital", "NameVillage"]) then {
-		_stronghold = createLocation["Invisible", getArray (_cities >> _x >> "position"), 1, 1];
+		private _stronghold = createLocation["Invisible", getArray (_cities >> _x >> "position"), 1, 1];
 		_stronghold setVariable ["GOS_occupied", false];
 		_strongholds pushBack _stronghold;
 	};
@@ -34,20 +34,20 @@ EXCLUSION_LIST = [];
 
 while{true} do {
 	// Retrieve active gridCells
-	_gridCells = call GOS_fnc_getGridCells;
+	private _gridCells = call GOS_fnc_getGridCells;
 
 	// Check for strongholds deactivation
 	{
-		_stronghold = _x;
-		_closeToGridCell = _gridCells apply { (locationPosition _stronghold distance2D (_x call GOS_fnc_gridToPos)) < 1000 };
+		private _stronghold = _x;
+		private _closeToGridCell = _gridCells apply { (locationPosition _stronghold distance2D (_x call GOS_fnc_gridToPos)) < 1000 };
 		if!(true in _closeToGridCell) then { [_stronghold] call GOS_fnc_clear }; //todo
 	} forEach (_strongholds select {_x getVariable "GOS_occupied"});
 
 	// Check for new strongholds activation
 	{
-		_gridCellPos = [_x] call GOS_fnc_gridToPos;
-		_renderDistance = 100*round(GOS_renderDistance * 10);
-		_candidates = nearestLocations[_gridCellPos, ["Invisible"], _renderDistance] select {!(_x getVariable "GOS_occupied")};
+		private _gridCellPos = [_x] call GOS_fnc_gridToPos;
+		private _renderDistance = 100*round(GOS_renderDistance * 10);
+		private _candidates = nearestLocations[_gridCellPos, ["Invisible"], _renderDistance] select {!(_x getVariable "GOS_occupied")};
 		{ [_x] call GOS_fnc_populate } forEach _candidates;
 	} forEach _gridCells;
 

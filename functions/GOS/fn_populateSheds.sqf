@@ -1,7 +1,7 @@
 ﻿params["_loc"];
-_center = locationPosition _loc;
-_sheds_list = [];
-_building_list = _loc getVariable ["GOS_marked", []];
+private _center = locationPosition _loc;
+private _sheds_list = [];
+private _building_list = _loc getVariable ["GOS_marked", []];
 
 // Half shed
 {
